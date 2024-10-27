@@ -18,7 +18,7 @@ function typeWord() {
     letterIndex++;
     setTimeout(typeWord, 100); 
   } else {
-    setTimeout(eraseWord, 1000); 
+    setTimeout(eraseWord, 2000); 
   }
 }
 
@@ -26,11 +26,11 @@ function eraseWord() {
   if (letterIndex >= 0) {
     wordDiv.textContent = words[i].substring(0, letterIndex);
     letterIndex--;
-    setTimeout(eraseWord, 50);
+    setTimeout(eraseWord, 100);
   } else {
     i = (i + 1) % words.length; 
     letterIndex = 0;
-    setTimeout(typeWord, 500);
+    setTimeout(typeWord, 200);
   }
 }
 
