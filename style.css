@@ -2,13 +2,37 @@
 html{
 	scroll-behavior: smooth;
  }
+@font-face {
+	font-family: 'Onest';
+	src: url(fonts/Onest-Black.ttf);
+	src: url(fonts/Onest-Bold.ttf);
+	src: url(fonts/Onest-ExtraBold.ttf);
+	src: url(fonts/Onest-ExtraLight.ttf);
+	src: url(fonts/Onest-Light.ttf);
+	src: url(fonts/Onest-Medium.ttf);
+	src: url(fonts/Onest-Regular.ttf);
+	src: url(fonts/Onest-SemiBold.ttf);
+	src: url(fonts/Onest-Thin.ttf);
+}
 
+@font-face {
+	font-family: 'e-UkraineHead';
+	src: url(fonts/e-UkraineHead-Bold.otf);
+	src: url(fonts/e-UkraineHead-Light.otf);
+	src: url(fonts/e-UkraineHead-LOGO.otf);
+	src: url(fonts/e-UkraineHead-Medium.otf);
+	src: url(fonts/e-UkraineHead-Regular.otf);
+	src: url(fonts/e-UkraineHead-Thin.otf);
+	src: url(fonts/e-UkraineHead-UltraLight.otf);
+}
  .wrapper {
-	min-height: 100%;
-	/*background-color: #0E0E0E;*/
+
+	background-color: #0E0E0E;
+	color: white;
 	display: flex;
 	flex-direction: column;
 	overflow: clip;
+	font-family:'Onest';
 }
 .wrapper > main {
 	flex-grow: 1;
@@ -16,11 +40,20 @@ html{
 
 [class*="__container"] {
 	max-width: 1440px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 70px;
+	padding-right: 70px;
 	margin: 0 auto;
 }
 
 section{
 	margin-bottom: 200px;
+}
+
+#word{
+	display: inline-block;
+}
+
+h1{
+	font-family: 'e-UkraineHead';
+
 }

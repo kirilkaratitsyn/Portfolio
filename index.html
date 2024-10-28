@@ -10,27 +10,42 @@
 </head>
 <body>
     <div class="wrapper">
-        <header></header>
+        <header>
+        <div class="header__container  flex flex-row">
+            <h1 class="">KARATITSYN</h1>
+            <ul class=" flex flex-row">
+                <li>About Me</li>
+                <li>Process</li>
+                <li>FAQ</li>
+                <li>Works</li>
+                <li>Contact Me</li>
+            </ul>
+            <div ><span id="time"></span> Berlin, DE</div>
+        </div>
+        </header>
         <main>
             <section id="hero">
-                <div class="hero__container flex flex-col">
-                    <div class="content flex flex-row">
-                        <h1>I'm Kiril<br>
-                        <p>Shopify</p><p id="word"></p>
-                        </h1>
-                    </div>
+                <div class="hero__container flex flex-col  items-center justify-center ">
+                    <h1>I'm Kiril<br>
+                    <span class="text-[#ADFF20] drop-shadow-[0px_4px_10px_rgba(0,0,0,0.5)]">Shopify</span> <span id="word"></span>
+                    </h1>
                     <div class="slogan">So good, your competitors will cry.</div>
                     <div class="buttons">
-                        <button>Book a Call</button>
+                        <button id="Button">Book a Call</button>
                         <span>or</span>
                         <button>Send me a message</button>
                     </div>
+                    </div>
+                    
                 </div>
             </section>
             <section id="about_me"></section>
         </main>
         <footer></footer>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="script.js"></script>   
+<audio id="clickSound" src="among-us-role-reveal-sound.mp3"></audio>
+
 </body>
 </html>
