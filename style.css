@@ -57,3 +57,23 @@ h1{
 	font-family: 'e-UkraineHead';
 
 }
+
+.primary-gradient{
+	background: linear-gradient(to bottom, #FF5D24, #FFA21D);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.light-gradient{
+	background: linear-gradient(to bottom, #FFFFFF 70%, #999999 30%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.primary-shadow{
+	filter: drop-shadow(0 0 19.4px rgba(250, 162, 33, 1));
+}
+
+.light-shadow{
+	
+}
