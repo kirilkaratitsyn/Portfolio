@@ -9,36 +9,53 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-        <div class="header__container  flex flex-row">
-            <h1 class="">KARATITSYN</h1>
-            <ul class=" flex flex-row">
+    <div class="wrapper ">
+        <header class="bg-[#0E0E0E]">
+        <div class="header__container  flex flex-row justify-between items-center py-[7px]">
+            <div class="flex flex-row">  <h1 class="primary-gradient mr-[57px]">KARATITSYN</h1>
+            <ul class=" flex flex-row gap-[25px]">
                 <li>About Me</li>
                 <li>Process</li>
                 <li>FAQ</li>
                 <li>Works</li>
                 <li>Contact Me</li>
-            </ul>
+            </ul></div>
+          
             <div ><span id="time"></span> Berlin, DE</div>
         </div>
         </header>
         <main>
             <section id="hero">
-                <div class="hero__container flex flex-col  items-center justify-center text-5xl	 ">
-                    <h1 class="light-gradient">I'm Kiril<br></h1>
-                    <p class="primary-gradient primary-shadow font-extrabold ">Shopify</p> <span id="word"></span>
-                    <div class="slogan  light-gradient">So good, your competitors will cry.</div>
-                    <div class="buttons">
-                        <button data-cal-config='{"layout":"month_view","theme":"dark"}' data-cal-namespace="free-consultation-call" data-cal-link="kiril-karatitsyn/free-consultation-call" id="Button">Book a Call</button>
-                        <span>or</span>
-                        <button>Send me a message</button>
+                <video class="back-video" autoplay loop muted playsinline>
+                <source src="source/shadergradient.webm" type="video/webm">
+                </video>
+                
+                <div class="hero__container flex flex-col items-center justify-center text-5xl font-medium py-[70px] bg-transparent">
+                <h1 class="mb-2.5 ">I'm Kiril<br></h1>
+                <div>
+                <span class="primary-gradient primary-shadow mr-2.5 font-bold">Shopify</span>
+                <h1 class="light-gradient mr-2.5 " id="word">Magician</h1>
+                </div>
+                <div class="slogan mt-[37px] underline text-[32px] light-gradient">So good, your competitors will cry.</div>
+                <div class="buttons mt-14 flex justify-center items-center gap-5 text-sm whitespace-nowrap">
+                <button class=" light-shadow text-black bg-white px-12 py-3 rounded-[22px]" data-cal-link="kiril-karatitsyn/free-consultation-call" data-cal-namespace="free-consultation-call" data-cal-config='{"layout":"month_view","theme":"dark"}' id="Button">Book a Call</button>
+                <span>or</span>
+                <button onclick="openEmail()" class="flex justify-center items-center py-3 px-2 border-white border-[2px] rounded-[24px]">Send me a message <img class="ml-2" width="16px" src="source/Arrow up-right.png"></button>
+                </div>
+                
+                </div>
+            </section>   
+            <section class="bg-[#0E0E0E]" id="about_me">
+                <div class="about__container">
+                    <div class="content">
+                        <h1>My name is Kiril Karatitsyn</h1>
                     </div>
+                    <div class="media">
+
                     </div>
-                    
                 </div>
             </section>
-            <section id="about_me"></section>
+
         </main>
         <footer></footer>
     </div>

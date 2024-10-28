@@ -1,5 +1,6 @@
 
-const words = [  "Magician",
+const words = [ "Developer", 
+   "Magician",
     "Expert",
     "Master",
     "Specialist",
@@ -40,8 +41,8 @@ typeWord();
 const element = document.body;
 
 const cursor = document.createElement('div');
-cursor.style.width = '20px';
-cursor.style.height = '20px';
+cursor.style.width = '10px';
+cursor.style.height = '10px';
 cursor.style.borderRadius = '50%';
 cursor.style.backgroundColor = 'white';
 cursor.style.position = 'absolute';
@@ -54,8 +55,8 @@ let targetX = 0;
 let targetY = 0;
 
 element.addEventListener('mousemove', (e) => {
-  targetX = e.clientX - 10;
-  targetY = e.clientY - 10;
+  targetX = e.clientX - 5;
+  targetY = e.clientY - 5;
 });
 
 function animateCursor() {
@@ -64,8 +65,8 @@ function animateCursor() {
   const diffY = targetY - cursorY;
 
   // Змінюємо позицію курсора на невелику частину різниці
-  cursorX += diffX * 0.1; // 0.1 - коефіцієнт плавності
-  cursorY += diffY * 0.1;
+  cursorX += diffX * 0.08; // 0.1 - коефіцієнт плавності
+  cursorY += diffY * 0.08;
 
   // Встановлюємо нову позицію курсора
   cursor.style.left = `${cursorX}px`;
@@ -92,6 +93,9 @@ function getCurrentTimeWithAmPm() {
 const timeElement = document.getElementById('time'); // Замініть 'time' на id вашого елемента
 timeElement.textContent = getCurrentTimeWithAmPm();
 
+setInterval(() => {
+  timeElement.textContent = getCurrentTimeWithAmPm();
+}, 5000); // 60000 мс = 1 минута
 
 
 
@@ -105,3 +109,8 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
   // `data-cal-config='{"layout":"month_view","theme":"dark"}'`
 
   Cal.ns["free-consultation-call"]("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":true,"layout":"month_view"});
+
+
+  function openEmail() {
+    window.open("mailto:karat2007ll@gmail.com");
+}
