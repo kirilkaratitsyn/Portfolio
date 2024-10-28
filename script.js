@@ -36,8 +36,6 @@ function eraseWord() {
 }
 
 typeWord(); 
-
-
 const element = document.body;
 
 const cursor = document.createElement('div');
@@ -55,29 +53,24 @@ let targetX = 0;
 let targetY = 0;
 
 element.addEventListener('mousemove', (e) => {
-  targetX = e.clientX - 5;
-  targetY = e.clientY - 5;
+  targetX = e.clientX + window.scrollX - 5; 
+  targetY = e.clientY + window.scrollY - 5;
 });
 
 function animateCursor() {
-  // Розраховуємо різницю між поточною та цільовою позицією
   const diffX = targetX - cursorX;
   const diffY = targetY - cursorY;
 
-  // Змінюємо позицію курсора на невелику частину різниці
-  cursorX += diffX * 0.08; // 0.1 - коефіцієнт плавності
+  cursorX += diffX * 0.08;
   cursorY += diffY * 0.08;
 
-  // Встановлюємо нову позицію курсора
   cursor.style.left = `${cursorX}px`;
   cursor.style.top = `${cursorY}px`;
 
-  // Запускаємо анімацію знову
   requestAnimationFrame(animateCursor);
 }
 
-animateCursor(); // Запускаємо анімацію
-
+animateCursor();
 function getCurrentTimeWithAmPm() {
   const now = new Date();
   let hours = now.getHours();
