@@ -118,9 +118,16 @@ body{
 	padding-right: 75px;
 	margin: 0 auto;
 }
-
+@media (max-width:680px) {
+	[class*="__container"] {
+		max-width: 1440px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+	}
+}
 section{
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 	border-bottom: 1px #FF5D24;
 }
 
@@ -181,4 +188,10 @@ button{transition: all 0.5s ease;}
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.3); /* Черное наложение с 50% прозрачностью */
 	z-index: 0;
+	}
+
+
+	a {transition: all 0.5s ease;}
+	.item img{
+		transition: all 0.5s ease;	
 	}

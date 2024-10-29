@@ -45,17 +45,11 @@ cursor.style.borderRadius = '50%';
 cursor.style.backgroundColor = 'white';
 cursor.style.position = 'absolute';
 cursor.style.pointerEvents = 'none';
-document.body.appendChild(cursor);
 
 let cursorX = 0;
 let cursorY = 0;
 let targetX = 0;
 let targetY = 0;
-
-element.addEventListener('mousemove', (e) => {
-  targetX = e.clientX + window.scrollX - 5; 
-  targetY = e.clientY + window.scrollY - 5;
-});
 
 function animateCursor() {
   const diffX = targetX - cursorX;
@@ -70,7 +64,17 @@ function animateCursor() {
   requestAnimationFrame(animateCursor);
 }
 
-animateCursor();
+// Перевіряємо, чи це ПК (не мобільний пристрій)
+if (!/Mobi|Android/i.test(navigator.userAgent)) {
+  document.body.appendChild(cursor); // Додаємо курсор лише на ПК
+
+  element.addEventListener('mousemove', (e) => {
+    targetX = e.clientX + window.scrollX - 5; 
+    targetY = e.clientY + window.scrollY - 5;
+  });
+
+  animateCursor();
+}
 function getCurrentTimeWithAmPm() {
   const now = new Date();
   let hours = now.getHours();
