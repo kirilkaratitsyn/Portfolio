@@ -130,7 +130,7 @@ section{
 
 
 .primary-gradient{
-	background: linear-gradient(to right, #FF5D24, #FFA21D);
+	background: linear-gradient(to right, #ffffff, #FFA21D);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
