@@ -79,22 +79,36 @@ function getCurrentTimeWithAmPm() {
   const now = new Date();
   let hours = now.getHours();
   const minutes = now.getMinutes();
-  const amPm = hours >= 12 ? 'PM' : 'AM';
+  const seconds = now.getSeconds();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  
+  // Convert to 12-hour format
   hours = hours % 12;
-  hours = hours ? hours : 12; // 0 годин має відображатися як 12
-  const timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ' ' + amPm;
-  return timeString;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  
+  // Add leading zeros
+  const formattedMinutes = minutes.toString().padStart(2, '0');
+  const formattedSeconds = seconds.toString().padStart(2, '0');
+  
+  return `${hours}:${formattedMinutes} ${ampm}`;
 }
 
-// Виводимо час на сторінку
-const timeElement = document.getElementById('time'); // Замініть 'time' на id вашого елемента
-timeElement.textContent = getCurrentTimeWithAmPm();
+function updateAllTimeElements() {
+  // Находим все элементы с id="time"
+  const timeElements = document.querySelectorAll('#time');
+  const currentTime = getCurrentTimeWithAmPm();
+  
+  // Обновляем текст во всех найденных элементах
+  timeElements.forEach(element => {
+      element.textContent = currentTime;
+  });
+}
 
-setInterval(() => {
-  timeElement.textContent = getCurrentTimeWithAmPm();
-}, 5000); // 60000 мс = 1 минута
+// Инициализация при загрузке страницы
+updateAllTimeElements();
 
-
+// Обновление каждые 5 секунд
+setInterval(updateAllTimeElements, 30000);
 
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", "free-consultation-call", {origin:"https://cal.com"});
