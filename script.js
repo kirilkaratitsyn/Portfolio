@@ -108,6 +108,29 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
   Cal.ns["free-consultation-call"]("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":true,"layout":"month_view"});
 
 
-  function openEmail() {
-    window.open("mailto:karat2007ll@gmail.com");
-}
+  document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+
+    burger.addEventListener('click', function() {
+        // Toggle the active class on burger
+        this.classList.toggle('active');
+        
+        // Toggle the open class on nav
+        nav.classList.toggle('open');
+        
+        // Toggle overflow on body
+        body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking on links
+    const navLinks = document.querySelectorAll('.nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            nav.classList.remove('open');
+            body.classList.remove('menu-open');
+        });
+    });
+});

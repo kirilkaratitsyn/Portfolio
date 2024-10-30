@@ -10,19 +10,23 @@
 </head>
 <body>
     <div class="wrapper ">
-        <header class="bg-[#0E0E0E]">
-        <div class="header  flex flex-row justify-between items-center p-[12px]">
-            <div class="flex flex-row">  <h1 class="primary-gradient mr-[57px]">KARATITSYN</h1>
-            <ul class=" flex flex-row gap-[25px]">
-                <li></a>About Me</li>
-                <li>Process</li>
-                <li>FAQ</li>
-                <li>Works</li>
-                <li>Contact Me</li>
-            </ul></div>
-          
-            <div ><span id="time"></span> Berlin, DE</div>
-        </div>
+        <header class="sticky w-full top-0 left-0">
+            <div class="header flex flex-row justify-between items-center p-[12px]">
+                <h1 class="primary-gradient">KARATITSYN</h1>
+                <ul class="nav md:flex md:flex-row gap-[25px]">
+                    <li><a href="#about_me">About Me</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#about_me">Contact Me</a></li>
+                </ul>
+                <div class="md:flex hidden">
+                    <span id="time"></span> Berlin, DE
+                </div>
+                <div class="burger flex relative z-50 items-center justify-end w-[30px] h-[18px] flex md:hidden">
+                    <span></span>
+                </div>
+            </div>
         </header>
         <main>
             <section id="hero">
@@ -31,12 +35,12 @@
                 </video>
                 
                 <div class="hero__container flex flex-col items-center justify-center  font-medium md:py-[70px] py-[35px] bg-transparent">
-                <h1 class="mb-2.5 text-3xl md:text-5xl ">I'm Kiril<br></h1>
+                <h1 class="mb-2.5 text-3xl md:text-5xl light-gradient ">I'm Kiril<br></h1>
                 <div>
                 <span class=" text-3xl md:text-5xl primary-gradient primary-shadow mr-2.5 font-bold">Shopify</span>
                 <h1 class="text-3xl md:text-5xl light-gradient mr-2.5 " id="word"></h1>
                 </div>
-                <div class="slogan mt-[37px] underline text-2xl  md:text-[32px] light-gradient">So good, your competitors <br> will cry.</div>
+                <div class="slogan mt-[37px] text-2xl  md:text-[32px] light-gradient">So good, your competitors <br> will cry.</div>
                 <div class="buttons mt-14 flex justify-center md:flex-row flex-col items-center gap-5 text-sm whitespace-nowrap">
                 <button class=" light-shadow text-black bg-white px-12 py-3 rounded-full" data-cal-link="kiril-karatitsyn/free-consultation-call" data-cal-namespace="free-consultation-call" data-cal-config='{"layout":"month_view","theme":"dark"}' id="Button">Book a Call</button>
                 <span class="md:inline-block hidden">or</span>
@@ -49,7 +53,7 @@
                 <div class="about__container  lg:flex flex-row justify-between">
                     <div class="content max-w-[670px]">
                         <h1 class=" mb-8 text-3xl md:text-[37px] font-bold primary-gradient  uppercase">My name is Kiril Karatitsyn</h1>
-                        <div class="font-bold text-[24px]">
+                        <div class="font-bold text-[24px] light-gradient">
                             <p class="mb-5">Shopify developer dedicated to crafting seamless, engaging online shopping experiences.</p>
                             <p>Motivated by precision and efficiency, I build solutions that make e-commerce simple and intuitive for businesses and their customers.</p>
                         </div>
@@ -95,8 +99,7 @@
             <section id="faq">
                 <div class="faq__container">  
                  <h1 class=" mb-8 text-[37px] font-bold primary-gradient primary-shadow ">FAQ</h1>
-                  <div class="items md:grid grid-cols-2   gap-x-[80px]">
-                    
+                  <div class="items md:grid grid-cols-2  gap-x-[80px]">
                       <div class="item mb-[40px] max-w-[490px] px-[10px] py-[5px] border-white border-[1px] rounded-[4px]">
                         <p class="text-[20px] mb-[24px] font-semibold ">What if I need help with more than just Shopify?
                         </p>
@@ -172,17 +175,16 @@
             </section>
             <section id="contact">
                 <div class="contact__container flex justify-center items-center flex-col">
-                    <h3 class="md:text-[24px] text-lg md:mb-[40px]  mb-5 font-[100]">LET'S WORK TOGETHER</h3>
-                    <a href="" class="font-medium md:text-[64px] text-2xl primary-gradient primary-shadow md:mb-[114px] mb-10">karatitsynkiril@gmail.com</a>
+                    <h3 class="md:text-[24px] text-lg md:mb-[40px]  mb-5 font-[200] light-gradient">LET'S WORK TOGETHER</h3>
+                    <a href="mailto:karatitsynkiril@gmail.com?subject=Hi Kiril!" class="font-medium md:text-[64px] text-2xl primary-gradient primary-shadow md:mb-[114px] mb-10 py-5">karatitsynkiril@gmail.com</a>
                     <button class=" light-shadow text-black font-semibold text-[14px] md:text-[24px] bg-white px-[43px] md:px-[73px] py-[9px] rounded-full" data-cal-link="kiril-karatitsyn/free-consultation-call" data-cal-namespace="free-consultation-call" data-cal-config='{"layout":"month_view","theme":"dark"}' id="Button">Book a Call</button>
-             
                 </div>
             </section>
         </main>
         <footer>
-            <div class="footer__container mb-[20px] flex flex-col justify-center items-center">
+            <div class="footer__container py-10 flex flex-col justify-center items-center">
                 <span class="opacity-60 mb-2.5 md:text-[16px] text-[12px]" >© 2024 Kiril Karatitsyn. All rights reserved.</span>
-                <div class="links   flex  p-1 gap-5 ">
+                <div class="links  flex  p-1 gap-5 ">
                     <a target=”_blank” class="opacity-60 hover:opacity-100 " href="https://github.com/kirilwallstreetreserv"><img class="   max-w-[32px]" src="source/github logo.png"></a>
                     <a target=”_blank” class="opacity-60 hover:opacity-100" href="https://www.instagram.com/kiril.karatitsyn?igsh=anUycG50cW1ha3li&utm_source=qr"> <img  class="  max-w-[32px]" src="source/instagram-icon logo.png"></a>
                     <a target=”_blank” class="opacity-60 hover:opacity-100" href="https://t.me/kirilkryt"> <img class="  max-w-[32px]" src="source/telegram logo.png"></a>
