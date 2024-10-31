@@ -156,6 +156,8 @@ background: linear-gradient(90deg, rgba(255,93,36,1) 0%, rgba(255,162,29,1) 100%
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5d24",endColorstr="#ffa21d",GradientType=1);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
 	
 }
 
@@ -170,13 +172,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5d24",endCo
 padding: 5px 0em;
 }
 
-.primary-shadow{
-	-webkit-filter: drop-shadow(0 0 19.4px rgba(250, 162, 33, 1));
-	-moz-filter: drop-shadow(0 0 19.4px rgba(250, 162, 33, 1));
-	-ms-filter: drop-shadow(0 0 19.4px rgba(250, 162, 33, 1));
-	filter: drop-shadow(0 0 19.4px rgba(250, 162, 33, 1));
+.primary-shadow {
+    text-shadow: 0 0 19.4px rgba(255, 162, 29, 0.53);
 }
-
 button{
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
