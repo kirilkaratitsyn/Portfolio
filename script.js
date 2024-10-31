@@ -148,3 +148,22 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.querySelector('.back-video');
+  
+  // Start playing the video
+  video.play().catch(function(error) {
+      console.log("Video autoplay failed:", error);
+      // Add controls if autoplay fails
+      video.controls = true;
+  });
+
+  // Check if video is playing after a short delay
+  setTimeout(function() {
+      if (video.paused) {
+          video.controls = true;
+      }
+  }, 1000);
+});
