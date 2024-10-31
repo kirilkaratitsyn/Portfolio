@@ -167,3 +167,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }, 1000);
 });
+
+
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide' );
+    splide.mount();
+  } );

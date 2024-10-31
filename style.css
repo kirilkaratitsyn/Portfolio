@@ -346,3 +346,18 @@ button{
 		}
 	}
 	
+
+	.splide__slide img {
+		width: 100vh;
+		height: auto;
+	  }
+.splide__arrow{
+	display: none!important;
+	opacity: 1!important;
+	transform: translateY(0%)!important;
+	background-color: white!important;
+}
+
+.splide__arrow svg{
+	fill: #000000!important;
+}
