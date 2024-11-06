@@ -159,7 +159,6 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
    splide.mount();
  } );
 
- gsap.from('.hero__container ' , {opacity: 0,  duration: 1, y:30})
 
 
  // Select all images with the 'lazy' class
