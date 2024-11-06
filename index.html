@@ -22,7 +22,7 @@
     <div class="wrapper ">
         <header class="sticky w-full top-0 left-0">
             <div class="header flex flex-row justify-between items-center p-[15px]">
-                <h1 class="primary-gradient "> <a href="#hero">KARATITSYN</a> </h1>
+                <h1 class="primary-gradient name "> <a href="#hero">KARATITSYN</a> </h1>
                 <ul class="nav  md:flex md:flex-row gap-[25px]">
                     <li><a href="#about_me">About Me</a></li>
                     <li><a href="#process">Process</a></li>
@@ -43,10 +43,11 @@
         </header>
         <main>
             <section id="hero">
-                <video class="back-video"  loop muted playsinline>
-                <source  src="source/1028(1).webm" type="video/mp4">
-                </video>
-                
+              <video class="back-video" autoplay loop muted playsinline>
+                <source src="source/1028(1).webm" type="video/webm">
+              </video>
+            
+             
                 <div class="hero__container flex flex-col items-center justify-center  font-medium md:py-[70px] py-[35px] bg-transparent">
                 <h1 class="mb-2.5 text-3xl md:text-5xl light-gradient ">I'm Kiril<br></h1>
                 <div class="min-h-[60px]">
@@ -267,6 +268,7 @@
 <script src="script.js"></script>   
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
-
+<script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 </body>
 </html>
