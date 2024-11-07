@@ -123,6 +123,7 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
 
  document.addEventListener('DOMContentLoaded', function() {
    const burger = document.querySelector('.burger');
+   const name = document.querySelector('.name');
    const nav = document.querySelector('.nav');
    const body = document.body;
 
@@ -132,6 +133,7 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
        
        // Toggle the open class on nav
        nav.classList.toggle('open');
+       name.classList.toggle('invisible');
        
        // Toggle overflow on body
        body.classList.toggle('menu-open');
@@ -143,29 +145,13 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
        link.addEventListener('click', () => {
            burger.classList.remove('active');
            nav.classList.remove('open');
+           name.classList.remove('invisible');
            body.classList.remove('menu-open');
        });
    });
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
- const video = document.querySelector('.back-video');
- 
- // Start playing the video
- video.play().catch(function(error) {
-     console.log("Video autoplay failed:", error);
-     // Add controls if autoplay fails
-     video.controls = true;
- });
-
- // Check if video is playing after a short delay
- setTimeout(function() {
-     if (video.paused) {
-         video.controls = true;
-     }
- }, 1000);
-});
 
 
  document.addEventListener( 'DOMContentLoaded', function() {
@@ -192,16 +178,4 @@ const observer = new IntersectionObserver((entries) => {
 // Observe each lazy image
 lazyImages.forEach((img) => {
   observer.observe(img);
-});
-
-
-
-window.addEventListener("load",function(){
-  const preloader = document.getElementById("preloader");
-  preloader.style.transform = "translateY(-100%)";
-  preloader.style.opacity = "0";
-  setTimeout(() => {
-      preloader.style.display = "none";
-      document.body.style.overflow = "auto";
-  }, 2000); // Wait for the animation to finish before hiding
 });
