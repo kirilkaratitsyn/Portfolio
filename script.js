@@ -173,8 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
    splide.mount();
  } );
 
- gsap.from('.hero__container ' , {opacity: 0,  duration: 1, y:30})
-
  // Select all images with the 'lazy' class
 const lazyImages = document.querySelectorAll('.lazy');
 
@@ -194,4 +192,16 @@ const observer = new IntersectionObserver((entries) => {
 // Observe each lazy image
 lazyImages.forEach((img) => {
   observer.observe(img);
+});
+
+
+
+window.addEventListener("load",function(){
+  const preloader = document.getElementById("preloader");
+  preloader.style.transform = "translateY(-100%)";
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+      preloader.style.display = "none";
+      document.body.style.overflow = "auto";
+  }, 2000); // Wait for the animation to finish before hiding
 });
