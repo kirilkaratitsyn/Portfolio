@@ -179,3 +179,15 @@ const observer = new IntersectionObserver((entries) => {
 lazyImages.forEach((img) => {
   observer.observe(img);
 });
+
+
+
+window.addEventListener("load",function(){
+  const preloader = document.getElementById("preloader");
+  preloader.style.transform = "translateY(-100%)";
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+      preloader.style.display = "none";
+      
+  }, 2000); // Wait for the animation to finish before hiding
+});
