@@ -154,10 +154,28 @@ Cal("init", "free-consultation-call", {origin:"https://cal.com"});
 
 
 
- document.addEventListener( 'DOMContentLoaded', function() {
-   var splide = new Splide( '.splide' );
-   splide.mount();
- } );
+ document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#works__slider', {
+        perPage: 1,
+        perMove: 1,
+        gap: "30px",
+        pagination: true,
+      }).mount();
+    });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#testimonial__slider', {
+        perPage: 3,
+        perMove: 1,
+        gap: "30px",
+        pagination: true,
+        breakpoints: {
+          640: {
+            perPage: 1, // Show 1 slide per page on screens 640px or smaller
+          }
+        }
+      }).mount();
+    });
 
  // Select all images with the 'lazy' class
 const lazyImages = document.querySelectorAll('.lazy');
